@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        {{> _head}}
-    </head>
-    <body>
-        {{> _nav}}
-        {{{body}}}
-        {{> _footer}}
-    </body>
+<html lang="en">
+<head>
+    {{> _head}}
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <img class="logo" src="/Images/royal_club_logo.jpg" alt="Club logo">
+
+    <h1>Welcome</h1>
+
+    {{> _nav}}
+
+    <a href="#bottom-info" class="top-scroll-box">
+        More Info <span class="arrow">↓</span>
+    </a>
+
+</header>
+
+{{{body}}}
+
+{{> _footer}}
+
+</body>
 </html>

@@ -1,9 +1,27 @@
-
 <nav>
-     <ul>
-          <li ><a  class='{{#if state.home}}active{{/if}}' href='/'>Home</a></li>     
-          <li><a class='{{#if state.contact}}active{{/if}}' href='contact'>Contact</a></li>
+    <ul>
+        <li>
+            <a class="{{#if state.home}}active{{/if}}" href="/">
+                Home
+            </a>
+        </li>
 
-     </ul>
+        <li>
+            <a class="{{#if state.memberships}}active{{/if}}" href="/memberships">
+                Memberships
+            </a>
+        </li>
+
+        <li>
+            <a class="{{#if state.contact}}active{{/if}}" href="/contact">
+                Contact/Join
+            </a>
+        </li>
+
+        <li>
+            <a class="{{#if state.about}}active{{/if}}" href="/about">
+                About
+            </a>
+        </li>
+    </ul>
 </nav>
-

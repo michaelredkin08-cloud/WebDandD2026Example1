@@ -201,8 +201,10 @@ main p {
     margin-bottom: 15px;
 }
 
+.card,
 .event-card,
 .member-card {
+    box-sizing: border-box;
     background: linear-gradient(to bottom, #5a3a78, #2a1e3b);
     display: inline-block;
     width: 260px;
@@ -411,4 +413,25 @@ footer {
     font-weight: bold;
     letter-spacing: 2px;
     pointer-events: none; /* makes it unclickable */
+}
+
+/* NOTES for me Check for future adjust */
+
+/* Mobile */
+.card {
+    width: 260px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 30px);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .card {
+        width: calc(33.333% - 30px);
+    }
 }

@@ -1,11 +1,12 @@
-// Load express
+// Load Express
 const express = require('express');
 
-// Load handlebars
+// Load Handlebars
 const exphbs = require('express-handlebars');
 
-// Instantiate express
+// Instantiate Express
 const app = express();
+
 
 // Configure Express to use Handlebars
 app.engine(
@@ -18,20 +19,20 @@ app.engine(
     })
 );
 
-// Set the view engine
+
+// Set Handlebars as the view engine
 app.set('view engine', 'hbs');
 
-// Tell Express where the views are
+
+// Where to find the views
 app.set('views', 'views');
 
-// Tell Express where static files are
+
+// Static files
 app.use(express.static('public'));
 
 
-// ========================
-// HOME
-// ========================
-
+// Home page
 app.get('/', (req, res) => {
 
     const state = {
@@ -39,7 +40,7 @@ app.get('/', (req, res) => {
     };
 
     const head = {
-        title: 'Home - Week 1'
+        title: 'Home - Clash Royale University Club'
     };
 
     res.render('index', {
@@ -50,34 +51,7 @@ app.get('/', (req, res) => {
     console.log('home');
 });
 
-
-// ========================
-// CONTACT
-// ========================
-
-app.get('/contact', (req, res) => {
-
-    const state = {
-        contact: true
-    };
-
-    const head = {
-        title: 'Contact - Week 1'
-    };
-
-    res.render('contact', {
-        state,
-        head
-    });
-
-    console.log('contact');
-});
-
-
-// ========================
-// ABOUT
-// ========================
-
+// About page
 app.get('/about', (req, res) => {
 
     const state = {
@@ -85,7 +59,7 @@ app.get('/about', (req, res) => {
     };
 
     const head = {
-        title: 'About Us'
+        title: 'About Us - Clash Royale University Club'
     };
 
     res.render('about', {
@@ -97,10 +71,64 @@ app.get('/about', (req, res) => {
 });
 
 
-// ========================
-// START SERVER
-// ========================
+// Contact page
+app.get('/contact', (req, res) => {
 
+    const state = {
+        contact: true
+    };
+
+    const head = {
+        title: 'Contact / Join - Clash Royale University Club'
+    };
+
+    res.render('contact', {
+        state,
+        head
+    });
+
+    console.log('contact');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Memberships page
+app.get('/memberships', (req, res) => {
+
+    const state = {
+        memberships: true
+    };
+
+    const head = {
+        title: 'Memberships - Clash Royale University Club'
+    };
+
+    res.render('memberships', {
+        state,
+        head
+    });
+
+    console.log('memberships');
+});
+
+
+
+
+// Start server
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
