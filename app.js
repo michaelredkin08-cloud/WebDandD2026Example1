@@ -91,6 +91,15 @@ app.get('/contact', (req, res) => {
 });
 
 
+// Adding the responsive page for this weeks task 
+app.get('/responsiveexample', (req, res) => {
+    res.render('responsiveexample', {
+        head: { title: 'Responsive Example' },
+        state: { responsiveexample: true }
+    });
+});
+
+
 
 
 
